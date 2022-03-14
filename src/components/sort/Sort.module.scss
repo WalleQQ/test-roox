@@ -1,0 +1,19 @@
+@import '/src/variables.scss';
+
+.sort {
+  background-color: $color-grey-1;
+  padding: 35px 26px 35px 20px;
+  height: 100vh;
+}
+
+.sort__title {
+  margin: 0 0 10px 0;
+  font-size: $font-size-2;
+  line-height: $line-height-2;
+}
+
+.sort button {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}

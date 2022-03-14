@@ -54,6 +54,8 @@ img {
 .App {
   min-height: 100%;
   display: grid;
+  grid-template-columns: 152px 1fr;
+  column-gap: 34px;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   margin: 0 auto;

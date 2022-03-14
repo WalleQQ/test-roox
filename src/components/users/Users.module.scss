@@ -1,0 +1,12 @@
+@import '/src/variables.scss';
+
+.users {
+  background-color: $basic-white;
+  padding: 19px 62px 19px 0;
+}
+
+.users__title {
+  margin: 0 0 17px 0;
+  font-size: $font-size-3;
+  line-height: $line-height-3;
+}

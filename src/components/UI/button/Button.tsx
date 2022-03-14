@@ -1,10 +1,16 @@
-import React, { Children, FC } from 'react';
+import React, { FC } from 'react';
 import styles from '../button/Button.module.scss';
 
-export const Button: FC = ({ children }) => {
+interface ButtonProps {
+  props: any;
+}
+
+export const Button: FC<ButtonProps> = ({ children, props }) => {
   return (
     <>
-      <button className={styles.button}>{children}</button>
+      <button onClick={props} className={styles.button}>
+        {children}
+      </button>
     </>
   );
 };

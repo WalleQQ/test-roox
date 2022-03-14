@@ -1,0 +1,26 @@
+@import '/src/variables.scss';
+
+.userItem {
+  background-color: $color-grey-2;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.userItem ul {
+  display: flex;
+  align-items: center;
+  column-gap: 7px;
+  &:not(:last-child) {
+    margin-bottom: 7px;
+  }
+}
+
+.userItem__heading {
+  color: $basic-grey;
+}
+
+.userItem a {
+  align-self: flex-end;
+  color: $basic-blue;
+}

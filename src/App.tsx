@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { FC, useEffect, useMemo, useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import '../src/globaCss.scss';
+import { Profile } from './components/Profile/Profile';
 import { Sort } from './components/sort/Sort';
 import { Users } from './components/users/Users';
 import { IUser } from './types/types';
@@ -17,6 +19,7 @@ function App() {
       const response = await axios.get<IUser[]>(
         'https://jsonplaceholder.typicode.com/users'
       );
+
       setUsers(response.data);
     } catch (e) {
       setError(true);
@@ -39,13 +42,25 @@ function App() {
     setSelectedSort(sort);
   };
 
+  const routes = (
+    <Routes>
+      <Route
+        path='/'
+        element={<Users error={error} loading={loading} users={users} />}
+      />
+      <Route path='/profile/:id' element={<Profile />} />
+    </Routes>
+  );
+
   return (
     <div className='App'>
       <Sort
         sortedUsersCity={sortedUsersCity}
         sortedUsersCompany={sortedUsersCompany}
       />
-      <Users error={error} loading={loading} users={users} />
+      <BrowserRouter>
+        <div>{routes}</div>
+      </BrowserRouter>
     </div>
   );
 }

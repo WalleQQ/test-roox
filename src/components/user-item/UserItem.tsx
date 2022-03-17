@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
 import { IUser } from '../../types/types';
+import { Profile } from '../Profile/Profile';
 import styles from '../user-item/UserItem.module.scss';
 
 interface UserItemProps {
@@ -23,7 +25,7 @@ export const UserItem: FC<UserItemProps> = ({ user }) => {
           <li>{user.company.name}</li>
         </ul>
       </div>
-      <a>Подробнее</a>
+      <Link to={`/profile/${user.id}`}>Подробнее</Link>
     </li>
   );
 };

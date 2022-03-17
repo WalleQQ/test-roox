@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import styles from '../button/Button.module.scss';
 
 interface ButtonProps {
-  props: any;
+  props?: any;
 }
 
 export const Button: FC<ButtonProps> = ({ children, props }) => {

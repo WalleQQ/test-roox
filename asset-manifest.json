@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/test-roox/static/css/main.b3319129.css",
-    "main.js": "/test-roox/static/js/main.c91c171f.js",
+    "main.js": "/test-roox/static/js/main.94f822fa.js",
     "static/media/Roboto-Regular.ttf": "/test-roox/static/media/Roboto-Regular.a8d6ac03c7b96b7acb62.ttf",
     "index.html": "/test-roox/index.html",
     "main.b3319129.css.map": "/test-roox/static/css/main.b3319129.css.map",
-    "main.c91c171f.js.map": "/test-roox/static/js/main.c91c171f.js.map"
+    "main.94f822fa.js.map": "/test-roox/static/js/main.94f822fa.js.map"
   },
   "entrypoints": [
     "static/css/main.b3319129.css",
-    "static/js/main.c91c171f.js"
+    "static/js/main.94f822fa.js"
   ]
 }

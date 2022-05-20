@@ -5,3 +5,8 @@
 ## Технологии в проекте
 
 React, TypeScript, scss, axios.
+
+### Установка проекта
+
+npm install
+npm run start

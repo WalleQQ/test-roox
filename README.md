@@ -10,5 +10,5 @@ React, TypeScript, scss, axios.
 
 ```
 npm install
-npm run serve
+npm run start
 ```

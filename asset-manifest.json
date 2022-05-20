@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Your%20site%20is%20published%20at%20https://walleqq.github.io/test-roox/static/css/main.d8d66d97.css",
-    "main.js": "/Your%20site%20is%20published%20at%20https://walleqq.github.io/test-roox/static/js/main.c91c171f.js",
-    "static/media/Roboto-Regular.ttf": "/Your%20site%20is%20published%20at%20https://walleqq.github.io/test-roox/static/media/Roboto-Regular.a8d6ac03c7b96b7acb62.ttf",
-    "index.html": "/Your%20site%20is%20published%20at%20https://walleqq.github.io/test-roox/index.html",
-    "main.d8d66d97.css.map": "/Your%20site%20is%20published%20at%20https://walleqq.github.io/test-roox/static/css/main.d8d66d97.css.map",
-    "main.c91c171f.js.map": "/Your%20site%20is%20published%20at%20https://walleqq.github.io/test-roox/static/js/main.c91c171f.js.map"
+    "main.css": "/test-roox/static/css/main.b3319129.css",
+    "main.js": "/test-roox/static/js/main.c91c171f.js",
+    "static/media/Roboto-Regular.ttf": "/test-roox/static/media/Roboto-Regular.a8d6ac03c7b96b7acb62.ttf",
+    "index.html": "/test-roox/index.html",
+    "main.b3319129.css.map": "/test-roox/static/css/main.b3319129.css.map",
+    "main.c91c171f.js.map": "/test-roox/static/js/main.c91c171f.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8d66d97.css",
+    "static/css/main.b3319129.css",
     "static/js/main.c91c171f.js"
   ]
 }

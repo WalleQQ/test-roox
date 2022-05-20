@@ -45,7 +45,7 @@ function App() {
   const routes = (
     <Routes>
       <Route
-        path='/'
+        path='/test-roox'
         element={<Users error={error} loading={loading} users={users} />}
       />
       <Route path='/profile/:id' element={<Profile />} />

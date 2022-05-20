@@ -1,14 +1,14 @@
-import React, { ChangeEvent, FC, useEffect, useState } from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import styles from '../Profile/Profile.module.scss';
-import { Button } from '../UI/button/Button';
-import { IUser } from '../../types/types';
+import {Button} from '../UI/button/Button';
+import {IUser} from '../../types/types';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
-import { ProfileForm } from '../profile-form/ProfileForm';
+import {useParams} from 'react-router-dom';
+import {ProfileForm} from '../profile-form/ProfileForm';
 
 export const Profile: FC = () => {
   const [user, setUser] = useState<IUser | null>(null);
-  const params = useParams<{ id: string }>();
+  const params = useParams<{id: string}>();
 
   async function fetchUser() {
     try {

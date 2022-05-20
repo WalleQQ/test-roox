@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { IUser } from '../../types/types';
-import { Profile } from '../Profile/Profile';
 import styles from '../user-item/UserItem.module.scss';
 
 interface UserItemProps {

@@ -19,4 +19,5 @@ export interface IUser {
   website: string;
   address: IAddress;
   company: ICompany;
+  description: string;
 }

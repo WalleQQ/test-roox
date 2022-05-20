@@ -1,8 +1,8 @@
 import axios from 'axios';
-import React, { FC, useEffect, useState } from 'react';
-import { IUser } from '../../types/types';
+import React, {FC, useState} from 'react';
+import {IUser} from '../../types/types';
 import styles from '../profile-form/ProfileForm.module.scss';
-import { emailRegExp, telRegExp } from '../../utils/validation';
+import {emailRegExp, telRegExp} from '../../utils/validation';
 
 interface ProfileFormProps {
   user: IUser;
@@ -36,6 +36,15 @@ export const ProfileForm: FC<ProfileFormProps> = ({
   };
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const onChangeTextAreaHandler = (
+    e: React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
     setFormData((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
@@ -168,7 +177,9 @@ export const ProfileForm: FC<ProfileFormProps> = ({
         </label>
         <label className={styles.profile__textareaLabel}>
           <textarea
+            name='textarea'
             className={styles.profile__textarea}
+            onChange={onChangeTextAreaHandler}
             readOnly={readonly}
           ></textarea>
         </label>

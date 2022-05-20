@@ -8,5 +8,7 @@ React, TypeScript, scss, axios.
 
 ### Установка проекта
 
+```
 npm install
-npm run start
+npm run serve
+```

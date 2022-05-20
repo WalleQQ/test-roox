@@ -1,11 +1,11 @@
 import axios from 'axios';
-import React, { FC, useEffect, useMemo, useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import '../src/globaCss.scss';
-import { Profile } from './components/Profile/Profile';
-import { Sort } from './components/sort/Sort';
-import { Users } from './components/users/Users';
-import { IUser } from './types/types';
+import {Profile} from './components/Profile/Profile';
+import {Sort} from './components/sort/Sort';
+import {Users} from './components/users/Users';
+import {IUser} from './types/types';
 
 function App() {
   const [users, setUsers] = useState<IUser[]>([]);

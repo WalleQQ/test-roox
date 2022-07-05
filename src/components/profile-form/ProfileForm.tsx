@@ -8,12 +8,16 @@ interface ProfileFormProps {
   user: IUser;
   readonly: boolean;
   buttonDisabled: boolean;
+  setReadonly: React.Dispatch<React.SetStateAction<boolean>>;
+  setButtonDisabled: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const ProfileForm: FC<ProfileFormProps> = ({
   user,
   readonly,
   buttonDisabled,
+  setReadonly,
+  setButtonDisabled,
 }) => {
   const [userFormData, setFormData] = useState(user);
   async function sendUser() {
@@ -24,6 +28,8 @@ export const ProfileForm: FC<ProfileFormProps> = ({
       );
       if (response) {
         console.log(JSON.stringify(response));
+        setReadonly(true);
+        setButtonDisabled(true);
       }
     } catch {
       console.error('');

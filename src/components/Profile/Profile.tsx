@@ -25,23 +25,25 @@ export const Profile: FC = () => {
     fetchUser();
   }, []);
 
-  const [readonly, setReadonly] = useState<any>('readOnly');
-  const [buttonDisabled, setButtonDisabled] = useState<any>('disabled');
+  const [readonly, setReadonly] = useState(true);
+  const [buttonDisabled, setButtonDisabled] = useState(true);
 
   const clickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
-    setReadonly('');
-    setButtonDisabled('');
+    setReadonly(false);
+    setButtonDisabled(false);
   };
 
   return (
     <section className={styles.profile}>
       <h2 className={styles.profile__title}>Профиль пользоваетля</h2>
-      <Button props={clickHandler}>Редактировать</Button>
+      <Button onClick={clickHandler}>Редактировать</Button>
       {user && (
         <ProfileForm
           user={user}
           readonly={readonly}
           buttonDisabled={buttonDisabled}
+          setButtonDisabled={setButtonDisabled}
+          setReadonly={setReadonly}
         />
       )}
     </section>

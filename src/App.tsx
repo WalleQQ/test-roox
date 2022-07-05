@@ -11,7 +11,6 @@ function App() {
   const [users, setUsers] = useState<IUser[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [selectedSort, setSelectedSort] = useState('');
 
   async function fetchUsers() {
     try {
@@ -32,14 +31,18 @@ function App() {
     fetchUsers();
   }, []);
 
-  const sortedUsersCity = (sort: any) => {
-    users.sort((a, b) => (a.address.city > b.address.city ? 1 : -1));
-    setSelectedSort(sort);
+  const sortedUsersCity = () => {
+    const sortedData = [...users].sort((a, b) => {
+      return a.address.city > b.address.city ? 1 : -1;
+    });
+    setUsers(sortedData);
   };
 
-  const sortedUsersCompany = (sort: any) => {
-    users.sort((a, b) => (a.company.name > b.company.name ? 1 : -1));
-    setSelectedSort(sort);
+  const sortedUsersCompany = () => {
+    const sortedData = [...users].sort((a, b) => {
+      return a.company.name > b.company.name ? 1 : -1;
+    });
+    setUsers(sortedData);
   };
 
   const routes = (
